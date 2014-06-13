@@ -1,18 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace FictionBookParser
 {
-
-
     public class SectionFormatElement
     {
+        private const string ParagraphTagName = "p";
+
+        private const string EmptyLineTagName = "empty-line";
+
+        public static SectionFormatElement FromXElement(XElement element)
+        {
+            if (element.Name.LocalName == ParagraphTagName)
+                return Paragraph.FromXElement(element);
+
+            if (element.Name.LocalName == EmptyLineTagName)
+                return new EmptyLine();
+
+            return null;
+        }
     }
 
     public class Paragraph : SectionFormatElement
     {
-        private const string ParagraphTagName = "p";
-
         public Paragraph()
         {
             FormattedText = new List<TextFormatElement>();
@@ -22,7 +33,7 @@ namespace FictionBookParser
 
         public string Text { get; private set; }
 
-        public static Paragraph FromXElement(XElement element)
+        public new static Paragraph FromXElement(XElement element)
         {
             var paragraph = new Paragraph();
             paragraph.Text = element.Value;

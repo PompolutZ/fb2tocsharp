@@ -23,6 +23,12 @@ namespace FictionBookParser
         {
             var section = new Section();
             var nodes = element.Elements().ToList();
+            foreach (var node in nodes)
+            {
+                var el = SectionFormatElement.FromXElement(node);
+                if(el != null)
+                    section.SectionElements.Add(el);
+            }
 
             var subSections = element.Fb2Elements("section");
             var ps = element.Fb2Elements("p");
