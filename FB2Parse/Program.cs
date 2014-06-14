@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Dynamic;
 using System.IO;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Linq;
-using FictionBookParser;
+using FictionBookUniversal;
+using FictionBookUniversal.Utilities;
 
 namespace FB2Parse
 {

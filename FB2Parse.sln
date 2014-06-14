@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FB2Parse", "FB2Parse\FB2Parse.csproj", "{2CC25851-4E54-4309-B373-1B95FF9BF683}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FictionBookParser", "FictionBookParser\FictionBookParser.csproj", "{3C0859F7-359D-41FD-B695-18DC12D6E61C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FictionBookUniversal", "FictionBookUniversal\FictionBookUniversal.csproj", "{98326068-729F-49D8-ADFA-EEFDF53A3AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2CC25851-4E54-4309-B373-1B95FF9BF683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC25851-4E54-4309-B373-1B95FF9BF683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC25851-4E54-4309-B373-1B95FF9BF683}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C0859F7-359D-41FD-B695-18DC12D6E61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C0859F7-359D-41FD-B695-18DC12D6E61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C0859F7-359D-41FD-B695-18DC12D6E61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C0859F7-359D-41FD-B695-18DC12D6E61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98326068-729F-49D8-ADFA-EEFDF53A3AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98326068-729F-49D8-ADFA-EEFDF53A3AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98326068-729F-49D8-ADFA-EEFDF53A3AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98326068-729F-49D8-ADFA-EEFDF53A3AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
