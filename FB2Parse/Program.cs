@@ -1,10 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Xml.Linq;
-using FictionBookUniversal;
-using FictionBookUniversal.Utilities;
+﻿using System.IO;
+using System.Threading;
 
 namespace FB2Parse
 {
@@ -14,40 +9,20 @@ namespace FB2Parse
         
         private const string DanceWithDragons = @"C:\Users\olo\Downloads\a_dance_with_dragons.fb2";
 
+        private const string BookPath = @"..\..\BooksForTest\book.fb2";
+
         static void Main(string[] args)
         {
             FictionBookParser fbParser = new FictionBookParser();
-            using (var fileStream = File.OpenRead(Book1))
+            //using (var fileStream = File.OpenRead(Book1))
+            //{
+            //    var doc = fbParser.Parse(fileStream);
+            //}
+
+            using (var fileStream = File.OpenRead(BookPath))
             {
                 var doc = fbParser.Parse(fileStream);
             }
-
-            using (var fileStream = File.OpenRead(DanceWithDragons))
-            {
-                var doc = fbParser.Parse(fileStream);
-            }
-        }
-    }
-
-    public class FictionBookParser
-    {
-        private const string FictionBookDefaultNamespace = "http://www.gribuser.ru/xml/fictionbook/2.0";
-
-        public string Parse(Stream bookStream)
-        {
-            XDocument xdoc = XDocument.Load(bookStream);
-            var book = xdoc.Element(XName.Get("FictionBook", FictionBookDefaultNamespace));
-            var description = book.Fb2Element(FictionBookConstants.DescriptionTagName);
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            var desc = Desciption.FromXElement(book.Fb2Element(FictionBookConstants.DescriptionTagName));
-
-            var body = Body.FromXElement(book.Fb2Element(FictionBookConstants.BodyTagName));
-            stopwatch.Stop();
-            Console.WriteLine(TimeSpan.FromMilliseconds(stopwatch.ElapsedMilliseconds));
-            var binary = book.Fb2Elements(FictionBookConstants.BinaryTagName).Count();
-
-            return book.ToString();
         }
     }
 }

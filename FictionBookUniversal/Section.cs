@@ -18,11 +18,15 @@ namespace FictionBookUniversal
             SectionElements = new List<SectionFormatElement>();
         }
 
+        public SectionTitle Title { get; private set; }
+
         public List<SectionFormatElement> SectionElements { get; private set; }
 
         public static Section FromXElement(XElement element)
         {
             var section = new Section();
+            section.Title = SectionTitle.FromXElement(element.Fb2Element(TitleTagName));
+
             var nodes = element.Elements().ToList();
             foreach (var node in nodes)
             {

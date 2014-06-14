@@ -42,8 +42,10 @@
     <Compile Include="Desciption.cs" />
     <Compile Include="DocumentInfo.cs" />
     <Compile Include="FictionBookConstants.cs" />
+    <Compile Include="FictionBookParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Section.cs" />
+    <Compile Include="SectionTitle.cs" />
     <Compile Include="TextFormatElement.cs" />
     <Compile Include="TitleInfo.cs" />
     <Compile Include="Utilities\Extensions.cs" />
