@@ -41,6 +41,7 @@
     <Compile Include="Body.cs" />
     <Compile Include="Desciption.cs" />
     <Compile Include="DocumentInfo.cs" />
+    <Compile Include="FictionBook.cs" />
     <Compile Include="FictionBookConstants.cs" />
     <Compile Include="FictionBookParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

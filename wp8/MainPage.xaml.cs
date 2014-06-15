@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using FictionBookUniversal;
 
@@ -16,7 +17,8 @@ namespace wp8
             var streamResourceInfo = Application.GetResourceStream(new Uri(BookPath, UriKind.Relative));
             using (var stream = streamResourceInfo.Stream)
             {
-                FictionBookParser.Parse(stream);
+                var book = FictionBookParser.Parse(stream);
+                var s = book.Body.Sections.FirstOrDefault();
             }
         }
 

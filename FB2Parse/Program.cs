@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading;
+using FictionBookUniversal;
 
 namespace FB2Parse
 {
@@ -13,15 +14,9 @@ namespace FB2Parse
 
         static void Main(string[] args)
         {
-            FictionBookParser fbParser = new FictionBookParser();
-            //using (var fileStream = File.OpenRead(Book1))
-            //{
-            //    var doc = fbParser.Parse(fileStream);
-            //}
-
             using (var fileStream = File.OpenRead(BookPath))
             {
-                var doc = fbParser.Parse(fileStream);
+                var doc = FictionBookParser.Parse(fileStream);
             }
         }
     }

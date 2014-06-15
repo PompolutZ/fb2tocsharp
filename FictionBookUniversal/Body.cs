@@ -13,7 +13,7 @@ namespace FictionBookUniversal
             Sections = new List<Section>();
         }
 
-        public List<Section> Sections { get; private set; }
+        public IList<Section> Sections { get; private set; }
 
         public static Body FromXElement(XElement element)
         {

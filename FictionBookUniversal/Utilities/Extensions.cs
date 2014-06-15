@@ -16,6 +16,11 @@ namespace FictionBookUniversal.Utilities
             return element.Element(XName.Get(elementName, FictionBookConstants.FictionBookDefaultNamespace)).IfNotNull(x => x.Value);
         }
 
+        public static TOut FromFb2Tag<TOut>(this XElement element, string elementName, Func<XElement, TOut> parse) where  TOut : class
+        {
+            return element.Fb2Element(elementName).IfNotNull(parse);
+        }
+
         public static IEnumerable<XElement> Fb2Elements(this XElement element, string elementName)
         {
             return element.Elements(XName.Get(elementName, FictionBookConstants.FictionBookDefaultNamespace));
